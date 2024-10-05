@@ -24,4 +24,10 @@ class CargosController extends Controller
         cargos::create($request->all());
         return redirect("/cargos");
     }
+
+    public function edit($id)
+    {
+        $cargo = cargos::find($id);
+        return view("cargos.edit", compact('cargo'));
+    }
 }
