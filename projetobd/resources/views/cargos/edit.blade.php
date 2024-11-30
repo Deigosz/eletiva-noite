@@ -29,6 +29,9 @@
                     <a href="/cargos" class="btn btn-secondary ms-2">
                         <i class="bi bi-arrow-left-circle"></i> Voltar
                     </a>
+                    <button type="submit" class="btn btn-primary">
+                        Salvar
+                    </button>
                 </div>
             </div>
         </form>

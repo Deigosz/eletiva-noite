@@ -1,35 +1,35 @@
 <x-app-layout>
 
     <div class="container mt-5">
-        <h3 class="text-center">Gerenciar Cargos</h3>
+        <h3 class="text-center">Gerenciar Turnos</h3>
         
-        <a class="btn btn-success mb-4" href="/cargos/create">
-            <i class="bi bi-plus-circle"></i> Inserir um novo Cargo
+        <a class="btn btn-success mb-4" href="/turnos/create">
+            <i class="bi bi-plus-circle"></i> Inserir um novo Turno
         </a>
 
         <table class="table table-hover table-bordered">
             <thead class="thead-dark">
                 <tr>
-                    <th>Cargo</th>
-                    <th>Descrição</th>
-                    <th>Salário (R$)</th>
+                    <th class="text-center">Período</th>
+                    <th class="text-center">Horário Inicio</th>
+                    <th class="text-center">Horário Fim</th>
                     <th class="text-center">Ações</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($cargos as $c)
+                @foreach($turno as $t)
                 <tr>
-                    <td>{{ $c->nomeCargo }}</td>
-                    <td>{{ $c->descricao }}</td>
-                    <td>{{ number_format($c->salario, 2, ',', '.') }}</td>
+                    <td class="text-center">{{ $t->periodo }}</td>
+                    <td class="text-center">{{ $t->horario_inicio }}</td>
+                    <td class="text-center">{{ $t->horario_final }}</td>
                     <td class="text-center">
-                        <a href="/cargos/{{ $c->id }}/edit" class="btn btn-info btn-sm mx-1">
+                        <a href="" class="btn btn-info btn-sm mx-1">
                             <i class="bi bi-eye"></i> Ver
                         </a>
-                        <a href="/cargos" class="btn btn-warning btn-sm mx-1">
+                        <a href="/turnos/{{ $t->id }}/edit" class="btn btn-warning btn-sm mx-1">
                             <i class="bi bi-pencil-square"></i> Alterar
                         </a>
-                        <a href="/cargos" class="btn btn-danger btn-sm mx-1">
+                        <a href="/turnos/{{ $t->id }}" class="btn btn-danger btn-sm mx-1">
                             <i class="bi bi-trash"></i> Excluir
                         </a>
                     </td>

@@ -30,7 +30,7 @@
     <div class="col-md-4">
         <div class="card shadow-lg">
             <div class="card-body">
-                <h5 class="card-title text-center">Sistema de Controle de Estoque</h5>
+                <h5 class="card-title text-center">Sistema de Controle de Ponto</h5>
                 @auth
                     <a href="/cargos" class="btn btn-primary">
                         Acessar área restrita
